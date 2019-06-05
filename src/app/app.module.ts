@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +26,9 @@ import { HomeComponent } from './home/home.component';
         path: 'about',
         loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
       }
-    ])
+    ], {
+      preloadingStrategy: PreloadAllModules
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
