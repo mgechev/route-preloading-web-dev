@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "code-splitting-web-dev": {
+    "preloading-web-dev": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/code-splitting-web-dev",
+            "outputPath": "dist/preloading-web-dev",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "code-splitting-web-dev:build"
+            "browserTarget": "preloading-web-dev:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "code-splitting-web-dev:build:production"
+              "browserTarget": "preloading-web-dev:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "code-splitting-web-dev:build"
+            "browserTarget": "preloading-web-dev:build"
           }
         },
         "test": {
@@ -105,15 +105,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "code-splitting-web-dev:serve"
+            "devServerTarget": "preloading-web-dev:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "code-splitting-web-dev:serve:production"
+              "devServerTarget": "preloading-web-dev:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "code-splitting-web-dev"
+  "defaultProject": "preloading-web-dev"
 }

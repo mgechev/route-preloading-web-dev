@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NyanComponent } from './nyan.component';
+import { AboutComponent } from './about.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [NyanComponent],
+  declarations: [AboutComponent],
   imports: [
     RouterModule.forChild([
       {
         path: '',
         pathMatch: 'full',
-        component: NyanComponent
+        component: AboutComponent
       }
     ]),
     CommonModule
   ]
 })
-export class NyanModule { }
+export class AboutModule { }
